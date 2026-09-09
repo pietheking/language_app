@@ -3,7 +3,7 @@
 import pg from "pg";
 import { randomBytes } from "node:crypto";
 import { readFile, writeFile } from "node:fs/promises";
-const envPath = new URL("./.env", import.meta.url);
+const envPath = new URL('./.env', import.meta.url);
 const admin = new pg.Client({
   connectionString: process.env.DATABASE_URL,
   connectionTimeoutMillis: 5000,
