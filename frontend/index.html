@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Translator</title>
+    <title>Translator — A world of words</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
@@ -17,13 +17,16 @@
          4. Output section -> translated text + actions
        ========================================================== 
   -->
-    <main class="translator-card" aria-label="Translator">
+    <div class="page-shell">
+      <nav class="site-nav" aria-label="Main navigation"><a class="wordmark" href="#">translator<span>↗</span></a><span class="nav-note">A little closer. In every language.</span><a class="library-link" href="#savedLibrary">Your collection ↗</a></nav>
+      <section class="intro" aria-labelledby="intro-title"><div class="eyebrow"><span></span> WORDS WITHOUT BORDERS</div><h1 id="intro-title">Less lost in translation.<br><em>More connection.</em></h1><p>Find the right words. Explore a new language.<br>Let the conversation go a little further.</p><div class="language-stamps" aria-hidden="true"><span>hello</span><span>bonjour</span><span>你好</span><span>ndewo</span></div></section>
+      <main class="translator-card" aria-label="Translator">
       <!-- 1. HEADER ------------------------------------------------ -->
       <header class="translator-header">
         <span class="app-icon" aria-hidden="true">
           <img src="./Union.png" alt="" />
         </span>
-        <h1 class="app-title">Translator</h1>
+        <h2 class="app-title">Make yourself understood</h2><span class="workspace-note">Your translation workspace</span>
       </header>
 
       <!-- 2. LANGUAGE BAR -------------------------------------------
@@ -52,7 +55,7 @@
           id="swapLangs"
           class="swap-btn"
           type="button"
-          aria-label="Swap languages"
+          aria-label="Swap languages" title="Swap languages"
         >
           <svg
             viewBox="0 0 24 24"
@@ -88,7 +91,7 @@
       </div>
 
       <!-- 3. INPUT SECTION -------------------------------------------- -->
-      <section class="panel panel--input">
+      <section class="panel panel--input"><div class="panel-heading"><span>01 / YOUR WORDS</span><span>Type or speak</span></div>
         <label for="sourceText" class="sr-only">Text to translate</label>
         <textarea
           id="sourceText"
@@ -105,7 +108,7 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
               type="button"
               class="icon-btn"
               id="micBtn"
-              aria-label="Voice input"
+              aria-label="Voice input" title="Voice input"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -129,7 +132,7 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
               type="button"
               class="icon-btn"
               id="waveBtn"
-              aria-label="Read aloud"
+              aria-label="Read aloud" title="Read aloud"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -156,7 +159,7 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
               type="button"
               class="icon-btn icon-btn--ghost"
               id="clearBtn"
-              aria-label="Clear text" 
+              aria-label="Clear text" title="Clear text" 
             >
               <svg
                 viewBox="0 0 24 24"
@@ -200,7 +203,7 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
          Result text + status message. Hidden/empty state is handled
          entirely in JS by toggling the `.is-empty` class.
     ------------------------------------------------------------------ -->
-      <section class="panel panel--output" id="outputPanel">
+      <section class="panel panel--output" id="outputPanel"><div class="panel-heading"><span>02 / A NEW PERSPECTIVE</span><span class="output-dot">Translation</span></div>
         <p class="result-text" id="resultText" aria-live="polite">
           Your translation will appear here.
         </p>
@@ -211,7 +214,7 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
               type="button"
               class="icon-btn"
               id="playBtn"
-              aria-label="Play translation audio"
+              aria-label="Play translation audio" title="Play translation audio"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -234,7 +237,7 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
               type="button"
               class="icon-btn"
               id="copyBtn"
-              aria-label="Copy translation"
+              aria-label="Copy translation" title="Copy translation"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -256,7 +259,7 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
               type="button"
               class="icon-btn"
               id="saveBtn"
-              aria-label="Save translation"
+              aria-label="Save translation" title="Save translation"
             >
               <svg
                 viewBox="0 0 24 24"
@@ -301,7 +304,7 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
         </div>
       </section>
 
-      <details class="panel saved-panel">
+      <details class="panel saved-panel" id="savedLibrary">
         <summary>Saved translations</summary>
         <div id="savedList"></div>
       </details>
@@ -309,8 +312,9 @@ How are you doing today? I hope you have a wonderful weekend.</textarea
         Translation and recording send content to Google Gemini. Saved
         translations stay in this browser.
       </p>
-    </main>
+    </main><footer class="page-footer"><span>Made for everyday conversations.</span><span>10 languages. Countless possibilities.</span></footer></div>
 
     <script src="./script.js" type="module"></script>
   </body>
 </html>
+
