@@ -98,7 +98,8 @@ select {
   flex-shrink: 0;
 }
 
-.app-icon img {
+.app-icon svg {
+  color: var(--color-primary);
   width: 18px;
   height: 18px;
   object-fit: contain;
